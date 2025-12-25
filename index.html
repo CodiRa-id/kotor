@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOTOR - Kopi Kantor | Kopi Premium Siap Minum untuk Pekerja Kantoran</title>
+    <meta name="description"
+        content="KOTOR (Kopi Kantor) - Kopi premium siap minum dalam kemasan cup. Praktis untuk pekerja kantoran yang sibuk. Pesan sekarang via WhatsApp!">
+    <meta name="keywords" content="kopi kantor, kopi praktis, kopi siap minum, kopi cup, kopi pekerja, kopi Surabaya">
+    <meta name="author" content="KOTOR - Kopi Kantor">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="KOTOR - Kopi Kantor | Teman Setia di Setiap Deadline">
+    <meta property="og:description"
+        content="Kopi premium siap minum yang menemani produktivitas kamu di kantor. Praktis, enak, dan bikin semangat!">
+    <meta property="og:image" content="kotor-cup.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KOTOR - Kopi Kantor">
+    <meta name="twitter:description" content="Kopi premium siap minum untuk pekerja kantoran yang produktif">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'coffee-dark': '#2A1B15',     /* Rich Espresso */
+                        'coffee-medium': '#4A3B32',   /* Dark Roast */
+                        'coffee-light': '#8D6E63',
+                        'cream': '#FAF7F2',           /* Oat Milk */
+                        'cream-light': '#FFFFFF',
+                        'accent-gold': '#D4A373',     /* Muted Gold */
+                        'accent-brown': '#A47551',
+                        'accent-orange': '#FF6F00',
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Lato', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #FAF7F2;
+            color: #2A1B15;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #2A1B15;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D4A373;
+            border-radius: 4px;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- Hero Section (Minimalist & Premium) -->
+    <section id="hero"
+        class="relative min-h-[100dvh] lg:h-screen lg:max-h-screen flex flex-col bg-[#FAF7F2] overflow-hidden">
+        <!-- Split Background -->
+        <div class="absolute inset-y-0 right-0 w-full lg:w-1/2 bg-[#E8E2D9] z-0"></div>
+
+        <!-- Navbar -->
+        <nav id="navbar" class="fixed top-0 left-0 w-full py-6 z-50 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <span class="text-2xl font-heading font-extrabold text-coffee-dark tracking-tight">KOTOR</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-10 text-sm font-bold text-coffee-dark/80 tracking-wide">
+                    <a href="#produk" class="hover:text-accent-orange transition-colors">Menu</a>
+                    <a href="#keunggulan" class="hover:text-accent-orange transition-colors">Keunggulan</a>
+                    <a href="#testimoni" class="hover:text-accent-orange transition-colors">Testimoni</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-coffee-dark">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Wrapper -->
+        <div
+            class="flex-1 flex items-start lg:items-center relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pt-32 lg:pt-0">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center w-full">
+
+                <!-- Left Side: Typography -->
+                <div class="flex flex-col justify-center text-left fade-in visible lg:mt-16">
+                    <h1
+                        class="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-coffee-dark leading-[1.1] mb-8 tracking-tight">
+                        Elevate Your <br>
+                        <span class="text-accent-brown italic">Daily Grind.</span>
+                    </h1>
+                    <p class="text-coffee-light text-lg mb-12 leading-relaxed max-w-lg font-medium">
+                        Nikmati kopi Arabica premium yang siap menemani setiap deadline dan meeting kamu.
+                        Praktis, enak, dan bikin fokus.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-6">
+                        <a href="https://wa.me/6281234567890?text=Halo!%20Saya%20mau%20pesan%20Kotor"
+                            class="bg-coffee-dark text-white px-10 py-4 rounded-full font-bold hover:bg-accent-brown transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-3 group">
+                            <span>Pesan Sekarang</span>
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#produk"
+                            class="flex items-center gap-3 text-coffee-dark font-bold group px-6 py-4 rounded-full hover:bg-white/50 transition-colors">
+                            <div
+                                class="w-10 h-10 rounded-full border border-coffee-dark flex items-center justify-center group-hover:bg-coffee-dark group-hover:text-white transition-colors">
+                                <i data-lucide="play" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <span>Lihat Menu</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="relative flex justify-center lg:justify-end fade-in visible delay-200">
+                    <!-- Subtle Background Blob for Depth -->
+                    <div
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-gold/10 rounded-full blur-3xl -z-10">
+                    </div>
+
+                    <div class="relative mt-8 w-full max-w-[350px] aspect-[4/5]">
+                        <img src="kotor-cup.jpg" alt="KOTOR Coffee Cup"
+                            class="w-full h-full object-contain drop-shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section id="produk" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Product Image -->
+                <div class="fade-in">
+                    <div class="relative bg-gradient-to-br from-cream to-cream-light rounded-3xl p-8 lg:p-12">
+                        <img src="kotor-cup.jpg" alt="KOTOR - Kopi Kantor Product"
+                            class="w-full max-w-md mx-auto drop-shadow-xl">
+                        <!-- Floating badge -->
+                        <div
+                            class="absolute top-6 right-6 bg-accent-orange text-white px-4 py-2 rounded-full font-heading font-bold text-sm shadow-lg">
+                            Best Seller 🔥
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Info -->
+                <div class="fade-in">
+                    <div class="inline-flex items-center gap-2 bg-accent-orange/10 rounded-full px-4 py-2 mb-6">
+                        <span class="text-sm font-semibold text-accent-orange">✨ Proudly Local</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-coffee-dark mb-4">
+                        KOTOR
+                        <span class="block text-xl sm:text-2xl font-bold text-coffee-medium mt-2">Kopi Kantor</span>
+                    </h2>
+                    <p class="text-lg text-coffee-light mb-6 leading-relaxed">
+                        Tau gak sih perasaan ketika kerjaan numpuk, meeting back-to-back, dan deadline makin deket?
+                        <strong class="text-coffee-dark">KOTOR hadir buat jadi partner produktivitas kamu!</strong>
+                    </p>
+                    <p class="text-base text-coffee-light mb-8 leading-relaxed">
+                        Dibuat dari biji kopi Arabica pilihan yang di-roast sempurna, KOTOR punya rasa yang bold tapi
+                        smooth.
+                        Dalam kemasan cup yang praktis, tinggal buka dan langsung minum.
+                        Gak perlu ribet, gak perlu antri – <span class="text-accent-orange font-semibold">fokus aja sama
+                            kerjaan!</span>
+                    </p>
+
+                    <!-- Product Highlights -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3 bg-cream-light rounded-xl p-4">
+                            <div class="w-10 h-10 bg-coffee-dark/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="coffee" class="w-5 h-5 text-coffee-dark"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-coffee-dark">100% Arabica</div>
+                                <div class="text-sm text-coffee-light">Premium Beans</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-cream-light rounded-xl p-4">
+                            <div class="w-10 h-10 bg-coffee-dark/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="droplet" class="w-5 h-5 text-coffee-dark"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-coffee-dark">250ml</div>
+                                <div class="text-sm text-coffee-light">Ukuran Ideal</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-cream-light rounded-xl p-4">
+                            <div class="w-10 h-10 bg-coffee-dark/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="leaf" class="w-5 h-5 text-coffee-dark"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-coffee-dark">No Pengawet</div>
+                                <div class="text-sm text-coffee-light">Fresh Daily</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-cream-light rounded-xl p-4">
+                            <div class="w-10 h-10 bg-coffee-dark/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="zap" class="w-5 h-5 text-coffee-dark"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-coffee-dark">Boost Energy</div>
+                                <div class="text-sm text-coffee-light">Caffeine Power</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price & CTA -->
+                    <div class="bg-gradient-to-r from-coffee-dark to-coffee-medium rounded-2xl p-6 text-white">
+                        <div class="flex flex-wrap items-center justify-between gap-4">
+                            <div>
+                                <div class="text-cream-light text-sm mb-1">Harga per Cup</div>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-3xl sm:text-4xl font-heading font-extrabold">Rp 25.000</span>
+                                    <span class="text-cream-light/60 line-through text-lg">Rp 30.000</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo!%20Saya%20mau%20pesan%20Kotor%20(Kopi%20Kantor).%20Mohon%20info%20lebih%20lanjut%20ya!"
+                                class="inline-flex items-center gap-2 bg-accent-orange hover:bg-accent-gold text-white px-6 py-3 rounded-full font-heading font-bold transition-all duration-300 hover:scale-105 shadow-lg">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                Order via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="keunggulan" class="py-20 lg:py-32 bg-gradient-to-b from-cream-light to-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-flex items-center gap-2 bg-accent-orange/10 rounded-full px-4 py-2 mb-4">
+                    <span class="text-sm font-semibold text-accent-orange">💪 Kenapa Harus KOTOR?</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-coffee-dark mb-4">
+                    Kenapa Pilih <span class="gradient-text">KOTOR</span>?
+                </h2>
+                <p class="text-lg text-coffee-light max-w-2xl mx-auto">
+                    Bukan cuma kopi biasa – ini kopi yang ngerti kebutuhan anak kantoran!
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="fade-in group bg-white rounded-3xl p-8 shadow-lg shadow-coffee-dark/5 hover:shadow-xl hover:shadow-accent-orange/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="coffee" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-coffee-dark mb-3">Kopi Premium Pilihan</h3>
+                    <p class="text-coffee-light leading-relaxed">
+                        Biji kopi Arabica berkualitas tinggi dengan rasa yang bold & konsisten di setiap tegukan.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div
+                    class="fade-in group bg-white rounded-3xl p-8 shadow-lg shadow-coffee-dark/5 hover:shadow-xl hover:shadow-accent-orange/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="package" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-coffee-dark mb-3">Kemasan Praktis</h3>
+                    <p class="text-coffee-light leading-relaxed">
+                        Cup siap minum, tinggal buka tutupnya. Gak perlu ribet seduh atau cari barista!
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div
+                    class="fade-in group bg-white rounded-3xl p-8 shadow-lg shadow-coffee-dark/5 hover:shadow-xl hover:shadow-accent-orange/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-coffee-dark mb-3">Boost Produktivitas</h3>
+                    <p class="text-coffee-light leading-relaxed">
+                        Pas banget buat menemani kerja & meeting. Fokus naik, kerjaan beres!
+                    </p>
+                </div>
+                <!-- Feature 4 -->
+                <div
+                    class="fade-in group bg-white rounded-3xl p-8 shadow-lg shadow-coffee-dark/5 hover:shadow-xl hover:shadow-accent-orange/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-gold rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="clock" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-coffee-dark mb-3">Hemat Waktu</h3>
+                    <p class="text-coffee-light leading-relaxed">
+                        Gak perlu antri coffee shop atau keluar kantor. Waktu berharga kamu tetap produktif!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect For Section -->
+    <section class="py-20 lg:py-32 bg-coffee-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-4">
+                    <span class="text-sm font-semibold text-accent-gold">🎯 Perfect Moment</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold mb-4">
+                    KOTOR Cocok Banget Buat...
+                </h2>
+                <p class="text-lg text-cream-light/80 max-w-2xl mx-auto">
+                    Situasi-situasi di kantor yang butuh boost semangat ekstra!
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Situation 1 -->
+                <div class="fade-in group text-center">
+                    <div
+                        class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-accent-orange/20 to-accent-gold/20 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i data-lucide="users" class="w-12 h-12 text-accent-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">Meeting Marathon</h3>
+                    <p class="text-cream-light/70">Rapat dari pagi sampai sore? KOTOR siap menemani biar tetap fokus!
+                    </p>
+                </div>
+                <!-- Situation 2 -->
+                <div class="fade-in group text-center">
+                    <div
+                        class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-accent-orange/20 to-accent-gold/20 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i data-lucide="alarm-clock" class="w-12 h-12 text-accent-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">Deadline Mepet</h3>
+                    <p class="text-cream-light/70">Kerjaan numpuk, deadline makin deket? Sruput KOTOR, gas terus kerja!
+                    </p>
+                </div>
+                <!-- Situation 3 -->
+                <div class="fade-in group text-center">
+                    <div
+                        class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-accent-orange/20 to-accent-gold/20 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i data-lucide="moon" class="w-12 h-12 text-accent-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">Lembur Malam</h3>
+                    <p class="text-cream-light/70">Harus stay di kantor sampai malam? KOTOR jaga semangat kamu!</p>
+                </div>
+                <!-- Situation 4 -->
+                <div class="fade-in group text-center">
+                    <div
+                        class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-accent-orange/20 to-accent-gold/20 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i data-lucide="sunrise" class="w-12 h-12 text-accent-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">Butuh Energi Pagi</h3>
+                    <p class="text-cream-light/70">Start your day right! KOTOR bikin pagi lebih semangat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" class="py-20 lg:py-32 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-flex items-center gap-2 bg-accent-orange/10 rounded-full px-4 py-2 mb-4">
+                    <span class="text-sm font-semibold text-accent-orange">💬 Kata Mereka</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-coffee-dark mb-4">
+                    Apa Kata <span class="gradient-text">Sobat KOTOR</span>?
+                </h2>
+                <p class="text-lg text-coffee-light max-w-2xl mx-auto">
+                    Cerita mereka yang udah ngerasain produktivitasnya naik level bareng KOTOR.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="fade-in bg-white p-8 rounded-3xl shadow-lg shadow-coffee-dark/5">
+                    <div class="flex items-center gap-1 mb-4 text-accent-orange">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-coffee-light mb-6 leading-relaxed">"Sumpah ini kopi penyelamat banget pas lagi
+                        dikejar deadline akhir bulan. Rasanya pas, gak bikin deg-degan, tapi meleknya dapet banget!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-coffee-dark rounded-full flex items-center justify-center text-white font-bold">
+                            AD
+                        </div>
+                        <div>
+                            <div class="font-bold text-coffee-dark">Andi D.</div>
+                            <div class="text-sm text-coffee-light">Graphic Designer</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="fade-in bg-white p-8 rounded-3xl shadow-lg shadow-coffee-dark/5">
+                    <div class="flex items-center gap-1 mb-4 text-accent-orange">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-coffee-light mb-6 leading-relaxed">"Praktis banget tinggal ambil di kulkas
+                        kantor. Rasanya premium kayak di cafe mahal, tapi harganya bersahabat buat anak kosan."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-coffee-dark rounded-full flex items-center justify-center text-white font-bold">
+                            SR
+                        </div>
+                        <div>
+                            <div class="font-bold text-coffee-dark">Sari R.</div>
+                            <div class="text-sm text-coffee-light">Accountant</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="fade-in bg-white p-8 rounded-3xl shadow-lg shadow-coffee-dark/5">
+                    <div class="flex items-center gap-1 mb-4 text-accent-orange">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-coffee-light mb-6 leading-relaxed">"Meeting marathon jadi gak berasa capeknya.
+                        KOTOR bener-bener mood booster terbaik. Wajib stok di pantry!"</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-coffee-dark rounded-full flex items-center justify-center text-white font-bold">
+                            BU
+                        </div>
+                        <div>
+                            <div class="font-bold text-coffee-dark">Budi U.</div>
+                            <div class="text-sm text-coffee-light">Project Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="pesan" class="py-20 lg:py-32 bg-coffee-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-white/5 -skew-y-3 origin-top-left scale-110"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6">
+                Siap Lebih Produktif?
+            </h2>
+            <p class="text-xl text-cream-light/80 mb-10 max-w-2xl mx-auto">
+                Jangan biarkan ngantuk menghambat karirmu. Pesan KOTOR sekarang dan rasakan bedanya!
+            </p>
+            <a href="https://wa.me/6281234567890?text=Halo!%20Saya%20mau%20pesan%20Kotor"
+                class="inline-flex items-center gap-3 bg-accent-orange text-white px-12 py-5 rounded-full font-heading font-bold text-xl hover:bg-accent-gold transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                Pesan via WhatsApp
+            </a>
+            <p class="mt-6 text-sm text-cream-light/40">
+                *Pengiriman instan untuk area Surabaya & sekitarnya
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-dark text-white py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <span class="text-2xl font-heading font-bold tracking-tight">KOTOR</span>
+                    <p class="text-cream-light/60 text-sm mt-2">Kopi Kantor - Teman Produktifmu</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-cream-light/60 hover:text-accent-orange transition-colors">Instagram</a>
+                    <a href="#" class="text-cream-light/60 hover:text-accent-orange transition-colors">LinkedIn</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm text-cream-light/40">
+                &copy; 2024 KOTOR. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890?text=Halo!%20Saya%20mau%20pesan%20Kotor"
+        class="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center group">
+        <i data-lucide="message-circle" class="w-8 h-8 fill-current"></i>
+        <span
+            class="absolute right-full mr-4 bg-white text-coffee-dark px-4 py-2 rounded-xl font-bold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Chat Kami!
+        </span>
+    </a>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white z-50 hidden flex flex-col items-center justify-center gap-8 text-2xl font-heading font-bold text-coffee-dark transition-all duration-300">
+        <a href="#produk" class="hover:text-accent-orange">Menu</a>
+        <a href="#keunggulan" class="hover:text-accent-orange">Keunggulan</a>
+        <a href="#testimoni" class="hover:text-accent-orange">Testimoni</a>
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-coffee-dark">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        fadeElements.forEach(el => fadeInObserver.observe(el));
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+                navbar.classList.remove('py-6');
+                navbar.classList.add('py-4');
+            } else {
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        if (closeMenuBtn && mobileMenu) {
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
